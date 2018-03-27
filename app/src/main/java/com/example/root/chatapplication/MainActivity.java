@@ -7,13 +7,15 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    Button inbox,compose;
+    Button inbox,compose,callList,callLogs;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         inbox = findViewById(R.id.btnInbox);
         compose = findViewById(R.id.btnCompose);
+        callList = findViewById(R.id.callList);
+        callLogs = findViewById(R.id.CallLogs);
         inbox.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -27,6 +29,22 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,SendSmsActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        callList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, ContactListActivity.class);
+                startActivity(i);
+            }
+        });
+
+        callLogs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, CallLogActivity.class);
+                startActivity(i);
             }
         });
     }

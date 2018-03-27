@@ -36,4 +36,22 @@
         android:layout_alignParentEnd="true"
         android:layout_alignTop="@+id/btnInbox"/>
 
+    <Button
+        android:id="@+id/callList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btnCompose"
+        android:layout_below="@+id/btnCompose"
+        android:layout_marginTop="83dp"
+        android:text="Call List" />
+
+    <Button
+        android:id="@+id/CallLogs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/callList"
+        android:layout_alignBottom="@+id/callList"
+        android:layout_alignEnd="@+id/btnInbox"
+        android:text="Call Logs" />
+
 </RelativeLayout>
